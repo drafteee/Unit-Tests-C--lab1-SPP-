@@ -1,0 +1,9 @@
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\bin\Debug\UnitTestQuickSort.dll
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\bin\Debug\UnitTestQuickSort.pdb
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\bin\Debug\QuickSortNS.dll
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\bin\Debug\QuickSortNS.pdb
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\obj\Debug\UnitTestQuickSort.csprojResolveAssemblyReference.cache
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\obj\Debug\UnitTestQuickSort.dll
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\UnitTestQuickSort\obj\Debug\UnitTestQuickSort.pdb

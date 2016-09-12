@@ -3,3 +3,6 @@ C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\bin\
 C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\bin\Debug\ConsoleQuickSort.pdb
 C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\obj\Debug\ConsoleQuickSort.exe
 C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\obj\Debug\ConsoleQuickSort.pdb
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\bin\Debug\QuickSortNS.dll
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\bin\Debug\QuickSortNS.pdb
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\obj\Debug\ConsoleQuickSort.csprojResolveAssemblyReference.cache
