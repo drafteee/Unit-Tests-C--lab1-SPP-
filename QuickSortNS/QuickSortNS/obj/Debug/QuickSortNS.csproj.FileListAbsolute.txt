@@ -1,0 +1,5 @@
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\QuickSortNS\bin\Debug\QuickSortNS.dll
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\QuickSortNS\bin\Debug\QuickSortNS.pdb
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\QuickSortNS\obj\Debug\QuickSortNS.csprojResolveAssemblyReference.cache
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\QuickSortNS\obj\Debug\QuickSortNS.dll
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\QuickSortNS\obj\Debug\QuickSortNS.pdb

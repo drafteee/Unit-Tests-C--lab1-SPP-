@@ -1,0 +1,5 @@
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\bin\Debug\ConsoleQuickSort.exe.config
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\bin\Debug\ConsoleQuickSort.exe
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\bin\Debug\ConsoleQuickSort.pdb
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\obj\Debug\ConsoleQuickSort.exe
+C:\My Documents\GitHub\Unit-Tests-C--lab1-SPP-\QuickSortNS\ConsoleQuickSort\obj\Debug\ConsoleQuickSort.pdb
