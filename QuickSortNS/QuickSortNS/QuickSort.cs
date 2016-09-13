@@ -14,8 +14,6 @@ namespace QuickSortNS
         {
             amountGenericValues = amountOfNumbers;
             arrayRandomValues = new int[amountGenericValues];
-
-            GenericArray();
         }
 
         public void GenericArray()
@@ -28,14 +26,14 @@ namespace QuickSortNS
             }
         }
 
-        public int[] GetStringValues()
+        public int[] GetArray()
         {
             return arrayRandomValues;
         }
-        public void QSort(int l,int r)
+        public void QSort(int[] array,int l,int r)
         {
             int temp;
-            int x = arrayRandomValues[l + (r - l) / 2];
+            int x = array[l + (r - l) / 2];
             //запись эквивалентна (l+r)/2, 
             //но не вызввает переполнения на больших данных
             int i = l;
@@ -43,22 +41,24 @@ namespace QuickSortNS
             //код в while обычно выносят в процедуру particle
             while (i <= j)
             {
-                while (arrayRandomValues[i] < x) i++;
-                while (arrayRandomValues[j] > x) j--;
+                while (array[i] < x) i++;
+                while (array[j] > x) j--;
                 if (i <= j)
                 {
-                    temp = arrayRandomValues[i];
-                    arrayRandomValues[i] = arrayRandomValues[j];
-                    arrayRandomValues[j] = temp;
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
                     i++;
                     j--;
                 }
             }
             if (i < r)
-                QSort(i, r);
+                QSort(array,i, r);
 
             if (l < j)
-                QSort(l, j);
+                QSort(array,l, j);
+
+            arrayRandomValues = array;
         }
     }
 }

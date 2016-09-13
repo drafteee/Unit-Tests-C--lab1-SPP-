@@ -16,9 +16,13 @@ namespace ConsoleQuickSort
             int amountOfNumbers = Convert.ToInt32(Console.ReadLine());
             QuickSort sort = new QuickSort(amountOfNumbers);
 
-            sort.QSort(0, amountOfNumbers - 1);
+            sort.GenericArray();
 
-            int[] array = sort.GetStringValues();
+            int[] array = sort.GetArray();
+
+            sort.QSort(array,0, amountOfNumbers - 1);
+
+            array = sort.GetArray();
 
             Console.Write("Sorted array:");
             for(int i = 0; i < amountOfNumbers; i++)
