@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,46 +7,37 @@ using System.Threading.Tasks;
 
 namespace QuickSortNS
 {
-    public class QuickSort
+    public class QuickSort<T>
     {
         private int amountGenericValues;
-        private int[] arrayRandomValues;
+        private T[] arrayT;
+        private CompareObj cObj = new CompareObj();
         public QuickSort(int amountOfNumbers)
         {
             amountGenericValues = amountOfNumbers;
-            arrayRandomValues = new int[amountGenericValues];
         }
 
-        public void GenericArray()
+        public T[] GetTArray()
         {
-            Random random = new Random();
-
-            for(int i = 0; i < amountGenericValues; i++)
-            {
-                arrayRandomValues[i] = random.Next(amountGenericValues);
-            }
+            return arrayT;
         }
 
-        public int[] GetArray()
-        {
-            return arrayRandomValues;
-        }
-        public void QSort(int[] array, int l, int r)
-        {
-            int temp;
+        public void QSort(T[] array, int l, int r)
+        {            
+            T temp;
             if (array.Length != 0)
             {
-                int x = array[l + (r - l) / 2];
+                T x = array[l + (r - l) / 2];
                 //запись эквивалентна (l+r)/2, 
                 //но не вызввает переполнения на больших данных
                 int i = l;
                 int j = r;
                 //код в while обычно выносят в процедуру particle
-                while (i <= j)
+                while (cObj.Compare(i, j)<=0)
                 {
-                    while (array[i] < x) i++;
-                    while (array[j] > x) j--;
-                    if (i <= j)
+                    while (cObj.Compare(array[i],x)<0) i++;
+                    while (cObj.Compare(array[j],x)>0) j--;
+                    if (cObj.Compare(i, j)<=0)
                     {
                         temp = array[i];
                         array[i] = array[j];
@@ -54,14 +46,15 @@ namespace QuickSortNS
                         j--;
                     }
                 }
-                if (i < r)
+                if (cObj.Compare(i, r) < 0)
                     QSort(array, i, r);
 
                 if (l < j)
                     QSort(array, l, j);
 
-                arrayRandomValues = array;
             }
+            arrayT = array;
+
         }
     }
 }

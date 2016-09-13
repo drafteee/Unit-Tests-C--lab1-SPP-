@@ -9,20 +9,26 @@ namespace ConsoleQuickSort
 {
     class Program
     {
+        public static int[] GenericIntArray(int amountOfNumbers)
+        {
+            Random random = new Random();
+            int[] arrayRandomValues = new int[amountOfNumbers];
+            for (int i = 0; i < amountOfNumbers; i++)
+            {
+                arrayRandomValues[i] = random.Next(amountOfNumbers);
+            }
+            return arrayRandomValues;
+        }
         static void Main(string[] args)
         {
             Console.Write("Input amount of numbers:");
 
             int amountOfNumbers = Convert.ToInt32(Console.ReadLine());
-            QuickSort sort = new QuickSort(amountOfNumbers);
+            QuickSort<int> sort = new QuickSort<int>(amountOfNumbers);
 
-            sort.GenericArray();
-
-            int[] array = sort.GetArray();
+            int[] array = GenericIntArray(amountOfNumbers);
 
             sort.QSort(array,0, amountOfNumbers - 1);
-
-            array = sort.GetArray();
 
             Console.Write("Sorted array:");
             for(int i = 0; i < amountOfNumbers; i++)
