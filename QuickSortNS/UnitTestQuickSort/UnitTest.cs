@@ -13,7 +13,6 @@ namespace UnitTestQuickSort
         }
 
         [TestMethod]
-
         public void TestReverseSortedArray()
         {
             QuickSort qSort = new QuickSort(6);
@@ -28,6 +27,19 @@ namespace UnitTestQuickSort
             }
            
             Assert.AreEqual("0 1 2 3 4 5 ", s1, null, "Failed");
+        }
+
+        [TestMethod]
+        public void TestEmptyArray()
+        {
+            QuickSort qSort = new QuickSort(0);
+            int[] array = new int[0] { };
+
+            qSort.QSort(array, 0, 0);
+
+            var a = qSort.GetArray();
+
+            CollectionAssert.AreEqual(a, array, "Not empty");
         }
     }
 }

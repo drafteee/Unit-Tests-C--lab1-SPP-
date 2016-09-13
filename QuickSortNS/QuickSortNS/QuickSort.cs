@@ -30,35 +30,38 @@ namespace QuickSortNS
         {
             return arrayRandomValues;
         }
-        public void QSort(int[] array,int l,int r)
+        public void QSort(int[] array, int l, int r)
         {
             int temp;
-            int x = array[l + (r - l) / 2];
-            //запись эквивалентна (l+r)/2, 
-            //но не вызввает переполнения на больших данных
-            int i = l;
-            int j = r;
-            //код в while обычно выносят в процедуру particle
-            while (i <= j)
+            if (array.Length != 0)
             {
-                while (array[i] < x) i++;
-                while (array[j] > x) j--;
-                if (i <= j)
+                int x = array[l + (r - l) / 2];
+                //запись эквивалентна (l+r)/2, 
+                //но не вызввает переполнения на больших данных
+                int i = l;
+                int j = r;
+                //код в while обычно выносят в процедуру particle
+                while (i <= j)
                 {
-                    temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                    i++;
-                    j--;
+                    while (array[i] < x) i++;
+                    while (array[j] > x) j--;
+                    if (i <= j)
+                    {
+                        temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                        i++;
+                        j--;
+                    }
                 }
+                if (i < r)
+                    QSort(array, i, r);
+
+                if (l < j)
+                    QSort(array, l, j);
+
+                arrayRandomValues = array;
             }
-            if (i < r)
-                QSort(array,i, r);
-
-            if (l < j)
-                QSort(array,l, j);
-
-            arrayRandomValues = array;
         }
     }
 }
