@@ -71,5 +71,31 @@ namespace UnitTestQuickSort
 
             Assert.AreEqual("a b d k s ", s1, null, "Failed");
         }
+
+        [TestMethod]
+        public void TestRealValues()
+        {
+            QuickSort<double> qSort = new QuickSort<double>(5);
+            double[] array = new double[5] {6.4,2.3,7.1,1.1,0.2 };
+
+            qSort.QSort(new double[5] { 6.4, 2.3, 7.1, 1.1, 0.2 }, 0, 4);
+
+            var a = qSort.GetTArray();
+
+            CollectionAssert.AreNotEqual(a, array, "Failed");
+        }
+
+        [TestMethod]
+        public void TestSameValues()
+        {
+            QuickSort<int> qSort = new QuickSort<int>(5);
+            int[] array = new int[5] { 6, 6, 6, 6, 6 };
+
+            qSort.QSort(new int[5] { 6, 6, 6, 6, 6 }, 0, 4);
+
+            var a = qSort.GetTArray();
+
+            CollectionAssert.AreEqual(a, array, "Failed");
+        }
     }
 }
