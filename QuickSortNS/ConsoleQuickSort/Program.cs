@@ -21,9 +21,7 @@ namespace ConsoleQuickSort
         }
         static void Main(string[] args)
         {
-            Console.Write("Input amount of numbers:");
-
-            int amountOfNumbers = Convert.ToInt32(Console.ReadLine());
+            int amountOfNumbers = Convert.ToInt32(args[0]);
             QuickSort<int> sort = new QuickSort<int>(amountOfNumbers);
 
             int[] array = GenericIntArray(amountOfNumbers);
