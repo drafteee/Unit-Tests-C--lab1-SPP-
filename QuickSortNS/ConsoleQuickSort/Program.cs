@@ -22,7 +22,7 @@ namespace ConsoleQuickSort
         static void Main(string[] args)
         {
             int amountOfNumbers = Convert.ToInt32(args[0]);
-            QuickSort<int> sort = new QuickSort<int>(amountOfNumbers);
+            QuickSort<int> sort = new QuickSort<int>();
 
             int[] array = GenericIntArray(amountOfNumbers);
 

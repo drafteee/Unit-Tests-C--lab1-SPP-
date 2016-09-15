@@ -11,7 +11,7 @@ namespace UnitTestQuickSort
         [TestMethod]
         public void TestReverseSortedArray()
         {
-            QuickSort<int> qSort = new QuickSort<int>(6);
+            QuickSort<int> qSort = new QuickSort<int>();
             
             qSort.QSort(new int[6] { 5, 4, 3, 2, 1, 0 }, 0, 5);
 
@@ -23,7 +23,7 @@ namespace UnitTestQuickSort
         [TestMethod]
         public void TestEmptyArray()
         {
-            QuickSort<int> qSort = new QuickSort<int>(0);
+            QuickSort<int> qSort = new QuickSort<int>();
             int[] array = new int[0] { };
 
             qSort.QSort(new int[0] { }, 0, 0);
@@ -36,7 +36,7 @@ namespace UnitTestQuickSort
         [TestMethod]
         public void TestNegativeValues()
         {
-            QuickSort<int> qSort = new QuickSort<int>(5);
+            QuickSort<int> qSort = new QuickSort<int>();
 
             qSort.QSort(new int[5] { -3, -1, -7, -5, -2 }, 0, 4);
 
@@ -48,7 +48,7 @@ namespace UnitTestQuickSort
         [TestMethod]
         public void TestStringValues()
         {
-            QuickSort<string> qSort = new QuickSort<string>(5);
+            QuickSort<string> qSort = new QuickSort<string>();
 
             qSort.QSort(new string[5] { "b", "s", "a", "k", "d" }, 0, 4);
 
@@ -60,7 +60,7 @@ namespace UnitTestQuickSort
         [TestMethod]
         public void TestRealValues()
         {
-            QuickSort<double> qSort = new QuickSort<double>(5);
+            QuickSort<double> qSort = new QuickSort<double>();
             double[] array = new double[5] {6.4,2.3,7.1,1.1,0.2 };
 
             qSort.QSort(new double[5] { 6.4, 2.3, 7.1, 1.1, 0.2 }, 0, 4);
@@ -73,7 +73,7 @@ namespace UnitTestQuickSort
         [TestMethod]
         public void TestSameValues()
         {
-            QuickSort<int> qSort = new QuickSort<int>(5);
+            QuickSort<int> qSort = new QuickSort<int>();
             int[] array = new int[5] { 6, 6, 6, 6, 6 };
 
             qSort.QSort(new int[5] { 6, 6, 6, 6, 6 }, 0, 4);

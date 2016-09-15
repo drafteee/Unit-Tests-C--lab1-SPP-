@@ -9,15 +9,9 @@ namespace QuickSortNS
 {
     public class QuickSort<T>
     {
-        private int amountGenericValues;
         private T[] arrayT;
         private CompareObj<T> cObjT = new CompareObj<T>();
         private CompareObj<int> cObjI = new CompareObj<int>();
-        public QuickSort(int amountOfNumbers)
-        {
-            amountGenericValues = amountOfNumbers;
-        }
-
         public T[] GetTArray()
         {
             return arrayT;
@@ -33,7 +27,6 @@ namespace QuickSortNS
                 //но не вызввает переполнения на больших данных
                 int i = l;
                 int j = r;
-
                 //код в while обычно выносят в процедуру particle
                 while (cObjI.Compare(i, j)<=0)
                 {
@@ -53,10 +46,8 @@ namespace QuickSortNS
 
                 if (cObjI.Compare(l, j)<0)
                     QSort(array, l, j);
-
             }
             arrayT = array;
-
         }
     }
 }
