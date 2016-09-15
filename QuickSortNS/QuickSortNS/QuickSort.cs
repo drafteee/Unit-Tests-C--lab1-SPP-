@@ -11,7 +11,8 @@ namespace QuickSortNS
     {
         private int amountGenericValues;
         private T[] arrayT;
-        private CompareObj cObj = new CompareObj();
+        private CompareObj<T> cObjT = new CompareObj<T>();
+        private CompareObj<int> cObjI = new CompareObj<int>();
         public QuickSort(int amountOfNumbers)
         {
             amountGenericValues = amountOfNumbers;
@@ -32,12 +33,13 @@ namespace QuickSortNS
                 //но не вызввает переполнения на больших данных
                 int i = l;
                 int j = r;
+
                 //код в while обычно выносят в процедуру particle
-                while (cObj.Compare(i, j)<=0)
+                while (cObjI.Compare(i, j)<=0)
                 {
-                    while (cObj.Compare(array[i],x)<0) i++;
-                    while (cObj.Compare(array[j],x)>0) j--;
-                    if (cObj.Compare(i, j)<=0)
+                    while (cObjT.Compare(array[i],x)<0) i++;
+                    while (cObjT.Compare(array[j],x)>0) j--;
+                    if (cObjI.Compare(i, j)<=0)
                     {
                         temp = array[i];
                         array[i] = array[j];
@@ -46,10 +48,10 @@ namespace QuickSortNS
                         j--;
                     }
                 }
-                if (cObj.Compare(i, r) < 0)
+                if (cObjI.Compare(i, r) < 0)
                     QSort(array, i, r);
 
-                if (l < j)
+                if (cObjI.Compare(l, j)<0)
                     QSort(array, l, j);
 
             }

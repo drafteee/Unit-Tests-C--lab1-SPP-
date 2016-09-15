@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace QuickSortNS
 {
-    class CompareObj:IComparer
+    class CompareObj<T>:IComparer<T>
     {
-        public int Compare(object x, object y)
+        public int Compare(T x, T y)
         {
             return (new CaseInsensitiveComparer()).Compare(x, y);
         }

@@ -16,13 +16,8 @@ namespace UnitTestQuickSort
             qSort.QSort(new int[6] { 5, 4, 3, 2, 1, 0 }, 0, 5);
 
             var a = qSort.GetTArray();
-            string s1 = "";
-            for(int i = 0; i < 6; i++)
-            {
-                s1 += Convert.ToString(a[i]) + " ";
-            }
-           
-            Assert.AreEqual("0 1 2 3 4 5 ", s1, null, "Failed");
+
+            CollectionAssert.AreEqual(new int[6] { 0, 1, 2, 3, 4, 5 }, a, "Failed");
         }
 
         [TestMethod]
@@ -46,13 +41,8 @@ namespace UnitTestQuickSort
             qSort.QSort(new int[5] { -3, -1, -7, -5, -2 }, 0, 4);
 
             var a = qSort.GetTArray();
-            string s1 = "";
-            for (int i = 0; i < 5; i++)
-            {
-                s1 += Convert.ToString(a[i]) + " ";
-            }
 
-            Assert.AreEqual("-7 -5 -3 -2 -1 ", s1, null, "Failed");
+            CollectionAssert.AreEqual(new int[5] { -7, -5, -3, -2, -1}, a, "Failed");
         }
 
         [TestMethod]
@@ -63,13 +53,8 @@ namespace UnitTestQuickSort
             qSort.QSort(new string[5] { "b", "s", "a", "k", "d" }, 0, 4);
 
             var a = qSort.GetTArray();
-            string s1 = "";
-            for (int i = 0; i < 5; i++)
-            {
-                s1 += Convert.ToString(a[i]) + " ";
-            }
 
-            Assert.AreEqual("a b d k s ", s1, null, "Failed");
+            CollectionAssert.AreEqual(new string[5] { "a", "b", "d", "k", "s"}, a, "Failed");
         }
 
         [TestMethod]
